@@ -1,20 +1,11 @@
 import React from "react"
-//import {name, age, person} from "./data"
-
-// Using wild card '*'
-import * as data from "./data"
-
+import BookList from "./BookList"
 import "./App.css"
 
-function App() {
+const App = () => {
 	return (
 		<section>
-			<p>This is my content</p>
-			<p>{data.name}</p>
-			<p>{data.age}</p>
-			<hr />
-			<p>{data.person.name}</p>
-			<p>{data.person.age}</p>
+			<BookList />
 		</section>
 	)
 }
