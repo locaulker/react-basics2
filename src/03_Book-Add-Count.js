@@ -1,10 +1,23 @@
 import React, {Component} from "react"
-import Button from "./Buttons"
 
 class Book extends Component {
+	//constructor(props) {
+	//	super(props)
+	//	this.handleClick = this.handleClick.bind(this)
+	//}
+
 	state = {
 		count: 1,
-		name: "John",
+	}
+
+	//handleClick() {
+	//	console.log("You clicked me!")
+	//	console.log(this.state.count)
+	//}
+
+	handleClick = () => {
+		console.log("You Clicked me!")
+		console.log(this.state.count)
 	}
 
 	render() {
@@ -17,7 +30,9 @@ class Book extends Component {
 				<div>
 					<h4>Title: {title}</h4>
 					<h6>Author: {author}</h6>
-					<Button />
+					<button type="button" onClick={this.handleClick}>
+						Add Count
+					</button>
 				</div>
 			</article>
 		)
